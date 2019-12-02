@@ -21,7 +21,7 @@ Validate login Successful
     LOG  Validate login Successful - Test case execution completed
 
 Validate login Failure
-    [Documentation]  Test Case for valid Login fail after entering in-valid username and password
+    [Documentation]  Test Case for Login fail after entering in-valid username and password
     [Tags]    Smoke  Login
     When User Enters Username  ${INVALID_USERNAME}
     AND User Enters Password  ${INVALID_PASSWORD}
