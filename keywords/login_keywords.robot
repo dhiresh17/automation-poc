@@ -3,8 +3,8 @@ Variables  ../page-locators/login_locators.py
 Library  SeleniumLibrary
 
 *** Variables ***
-${DASHBOARD_URL}  http://10.75.49.60:8084/userFront
-${LOGIN_ERROR_PAGE}  http://10.75.49.60:8084/index?error
+${DASHBOARD_URL}  ${HOST}/userFront
+${LOGIN_ERROR_PAGE}  ${HOST}/index?error
 
 *** Keywords ***
 User Enters Username
