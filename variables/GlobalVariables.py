@@ -1,3 +1,3 @@
 APPURL = 'http://10.75.49.60:8084/index'
-BROWSER = 'Safari'
+BROWSER = 'Chrome'
 HOME_PAGE_TITLE = 'User Front'

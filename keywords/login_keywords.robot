@@ -1,5 +1,5 @@
 *** Settings ***
-Variables  ../pageLocators/login_locators.py
+Variables  ../page-locators/login_locators.py
 Library  SeleniumLibrary
 
 *** Variables ***
