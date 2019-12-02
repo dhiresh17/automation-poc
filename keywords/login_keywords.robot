@@ -4,7 +4,7 @@ Library  SeleniumLibrary
 
 *** Variables ***
 ${DASHBOARD_URL}  http://10.75.49.60:8084/userFront
-
+${LOGIN_ERROR_PAGE}  http://10.75.49.60:8084/index?error
 
 *** Keywords ***
 User Enters Username
@@ -23,3 +23,7 @@ User can see dashboard
     ${URL}=  Get Location
     SHOULD BE EQUAL AS STRINGS  ${URL}  ${DASHBOARD_URL}
 
+User can see error page
+    sleep  5 seconds
+    ${URL}=  Get Location
+    SHOULD BE EQUAL AS STRINGS  ${URL}  ${LOGIN_ERROR_PAGE}
