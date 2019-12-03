@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation  This file contains common keywords
-Variables  ../variables/GlobalVariables.py
+Variables  ../variables/global_variables.py
 Library     OperatingSystem
 Library     SeleniumLibrary    screenshot_root_directory=front-end-screenshots  run_on_failure=Capture page screenshot
 
