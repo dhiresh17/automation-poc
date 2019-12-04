@@ -1,0 +1,16 @@
+==============================================================================
+Test-Suite                                                                    
+==============================================================================
+Test-Suite.Depositmoney Tests :: A resource file with reusable keywords and...
+==============================================================================
+User Can Deposit Money :: Test Case for valid Login after entering... | PASS |
+------------------------------------------------------------------------------
+Test-Suite.Depositmoney Tests :: A resource file with reusable key... | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Test-Suite                                                            | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\skal\Desktop\automation-poc\ParallelResult\pabot_results\Test-Suite.Depositmoney Tests\output.xml
