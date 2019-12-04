@@ -1,0 +1,5 @@
+DEPOSIT = "//span[text()='Go to Deposit']"
+#ACCOUNT_TYPE = "//select[@id='accountType']"
+ACCOUNT_TYPE = "id:accountType"
+D_SAVINGS = "//select[@id='accountType']/option[3]"
+DEPOSIT_BUTTON = "//button[@class='btn btn-lg btn-primary btn-block']"
