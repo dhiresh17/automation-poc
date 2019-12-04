@@ -1,0 +1,8 @@
+datasources:efcae8fcd849cc20a5f085b1731e7f03abe387c9
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:140ef5996e1ef6dad290ee93761b91f4f8560de9
+--suite Test-Suite.Depositmoney Tests
+--suite Test-Suite.Login Tests
+--suite Test-Suite.Registration Tests
+--suite Test-Suite.TransferMoney Test

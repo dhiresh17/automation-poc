@@ -9,8 +9,8 @@ Test Teardown  Terminate Application
 ${FIRST_NAME}=  akanksha
 ${LAST_NAME}=  tripathi
 ${CONTACT}=  9881190321
-${YOUR_EMAIL}=  automationuser
-${USER_NAME}=  automationuser1
+${YOUR_EMAIL}=  automationuser5
+${USER_NAME}=  automationuser5
 ${P@SSWORD}=   akanksha16
 
 

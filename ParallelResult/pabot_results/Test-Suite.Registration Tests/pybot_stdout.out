@@ -1,0 +1,16 @@
+==============================================================================
+Test-Suite                                                                    
+==============================================================================
+Test-Suite.Registration Tests                                                 
+==============================================================================
+Validate Signup Successful :: Test Case for valid Signup after ent... | PASS |
+------------------------------------------------------------------------------
+Test-Suite.Registration Tests                                         | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Test-Suite                                                            | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\skal\Desktop\automation-poc\ParallelResult\pabot_results\Test-Suite.Registration Tests\output.xml

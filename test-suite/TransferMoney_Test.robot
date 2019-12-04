@@ -1,7 +1,6 @@
 *** Settings ***
 Resource  ../keywords/common_keywords.robot
 Resource  ../keywords/Transfer_keywords.robot
-Resource  ../test-suite/login_tests.robot
 Variables  ../page-locators/login_locators.py
 Variables  ../page-locators/TransferMoney.py
 Resource   ../keywords/authentication_helper.robot
@@ -29,16 +28,16 @@ Validate Transfer Money Between Accounts
     LOG  Validate transfer Money Between Accounts Successful - Test case execution completed
 
 Validate Transfer Money to someone else Accounts
-        [Documentation]  Test Case for valid transfer money to someone else
-       [Tags]  Smoke Transfer
-       When Authenticate user  ${VALID_USERNAME}  ${VALID_PASSWORD}
-        AND Display transfer page
-        AND Select Transfer Money to someone else
-        AND Select Recipient
-        AND Select account who whould like to transfer From
-        AND Select the Saving Account
-        AND Enter amount who would like to transfer  ${AMOUNT}
-        AND Click on transfer button
-        LOG  Validate transfer Money to someone else Accounts Successful - Test case execution completed
+    [Documentation]  Test Case for valid transfer money to someone else
+    [Tags]  Smoke Transfer
+    When Authenticate user  ${VALID_USERNAME}  ${VALID_PASSWORD}
+    AND Display transfer page
+    AND Select Transfer Money to someone else
+    AND Select Recipient
+    AND Select account who whould like to transfer From
+    AND Select the Saving Account
+    AND Enter amount who would like to transfer  ${AMOUNT}
+    AND Click on transfer button
+    LOG  Validate transfer Money to someone else Accounts Successful - Test case execution completed
 
 

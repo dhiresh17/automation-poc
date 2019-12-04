@@ -1,7 +1,6 @@
 *** Settings ***
 Documentation     A resource file with reusable keywords and variables.
 Resource  ../keywords/authentication_helper.robot
-Resource  ../test-suite/login_tests.robot
 Resource  ../keywords/common_keywords.robot
 Resource  ../keywords/depositmoney_keywords.robot
 Library  SeleniumLibrary
@@ -15,7 +14,7 @@ ${INVALID_USERNAME}=  dhiresh1234
 *** Test Cases ***
 User Can Deposit Money
     [Documentation]  Test Case for valid Login after entering valid username and password
-    [Tags]    Smoke  Login
+    [Tags]    Smoke  deposit
     When Authenticate user  ${VALID_USERNAME}  ${VALID_USERNAME}
     AND User Clicks on Go To Deposit
     AND User Selects AccountType
