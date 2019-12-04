@@ -1,24 +1,18 @@
 *** Settings ***
-Documentation    Suite description
+Documentation    Test Suite to validate profile functionalities
 Resource  ../keywords/common_keywords.robot
-Resource  ../keywords/login_keywords.robot
 Resource  ../keywords/profile_keywords.robot
 Resource  ../keywords/authentication_helper.robot
-Library   ../utils/user_utils.py
 Test Setup  Initialise Application
 Test Teardown  Terminate Application
 
 *** Test Cases ***
-Test title
+Validate Profile
     [Documentation]  Test case to validate profile feature
-    [Tags]    SMOKE
-    &{user} =  Provided precondition
-    ${username}=  evaluate  ${user["username"]}
-    ${password}=  evaluate  ${user["password"]}
-    When Authenticate user  ${username}  ${password}
-    And  User navigates to profile
+    [Tags]    SMOKE  PROFILE
+    ${user} =  Provided valid user
+    given Authenticate user  ${user['username']}  ${user['password']}
+    when User navigates to profile
+    then Profile data should be valid  ${user}
+    LOG  Validate Profile - Test case execution completed
 
-*** Keywords ***
-Provided precondition
-    ${user}=  create_random_user
-    [return]  ${user}
