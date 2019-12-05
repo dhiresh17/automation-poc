@@ -12,7 +12,7 @@ ${INVALID_PASSWORD}=  password
 
 *** Test Cases ***
 Validate login Successful
-    [Documentation]  Test Case for valid Login after entering valid username and password
+    [Documentation]  Test Case for valid Login after entering valid username and passwor
     [Tags]    Smoke  Login
     When User Enters Username  ${VALID_USERNAME}
     AND User Enters Password  ${VALID_PASSWORD}
