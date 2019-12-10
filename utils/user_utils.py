@@ -32,6 +32,15 @@ class user_utils:
 
 
     def create_random_user(self):
+        user=self.get_random_user_data()
+        logger.info(user)
+        logger.console(user)
+        header = {'Content-Type': 'application/x-www-form-urlencoded'}
+        signupUrl=HOST+"/signup"
+        response=create_post_request(signupUrl,header,user)
+        return user
+
+    def get_random_user_data(self):
         user = {
             'firstName': self.getFirstName(),
             'lastName': self.getLastName(),
@@ -40,9 +49,4 @@ class user_utils:
             'username': self.getUsername(),
             'password': self.getPassword()
         }
-        logger.info(user)
-        logger.console(user)
-        header = {'Content-Type': 'application/x-www-form-urlencoded'}
-        signupUrl=HOST+"/signup"
-        response=create_post_request(signupUrl,header,user)
         return user

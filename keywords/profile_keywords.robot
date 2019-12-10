@@ -11,9 +11,28 @@ User navigates to profile
     sleep  5
     LOG  Navigated to Profile Page
 
+User logs out
+    Click Link    ${PROFILE_DROPDOWN}
+    click link   ${PROFILE_LOGOUT_LINK}
+    wait until page contains  Please sign in  10
+
 Provided valid user
     ${user}=  create_random_user
     [return]  ${user}
+
+Updated user details
+    ${user}=  get_random_user_data
+    log to console  ${user}
+    [return]  ${user}
+
+Updates profile data
+    [Arguments]  ${UPDATED_DETAILS}
+    INPUT TEXT  ${PROFILE_FIRSTNAME}  ${UPDATED_DETAILS['firstName']}
+    INPUT TEXT  ${PROFILE_LASTNAME}  ${UPDATED_DETAILS['lastName']}
+    INPUT TEXT  ${PROFILE_PHONE_NUMBER}  ${UPDATED_DETAILS['phone']}
+    INPUT TEXT  ${PROFILE_EMAIL}  ${UPDATED_DETAILS['email']}
+    click button  ${PROFILE_CHANGE_SETTINGS_BUTTON}
+    wait until page contains  My Profile  10
 
 Profile data should be valid
     [Arguments]  ${VALID_DATA}
@@ -21,7 +40,6 @@ Profile data should be valid
     Match Lastname  ${VALID_DATA}
     Match Phone  ${VALID_DATA}
     Match Email  ${VALID_DATA}
-    Match Username  ${VALID_DATA}
     LOG  Profile Data Validated
 
 Match Firstname
@@ -44,10 +62,6 @@ Match Email
     ${EMAIL}=  get value  ${PROFILE_EMAIL}
     Match values  ${EMAIL}  ${VALID_DATA['email']}
 
-Match Username
-    [Arguments]  ${VALID_DATA}
-    ${USERNAME}=  get value  ${PROFILE_USERNAME}
-    Match values  ${USERNAME}  ${VALID_DATA['username']}
 
 Match values
     [Arguments]  ${EXPECTED}  ${ACTUAL}
