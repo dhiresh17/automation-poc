@@ -26,7 +26,6 @@ Update Profile
     And Updates profile data  ${updatedDetails}
     Then User logs out
     and Authenticate user  ${user['username']}  ${user['password']}
-    sleep  5s
     when User navigates to profile
     then Profile data should be valid  ${updatedDetails}
     LOG  Update Profile - Test case execution completed

@@ -5,6 +5,7 @@ Library   ../utils/user_utils.py
 
 *** Keywords ***
 User navigates to profile
+    wait until element is visible  ${PROFILE_DROPDOWN}
     Click Link    ${PROFILE_DROPDOWN}
     Click Link    ${PROFILE_LINK}
     wait until page contains  My Profile  10
@@ -13,6 +14,7 @@ User navigates to profile
 
 User logs out
     Click Link    ${PROFILE_DROPDOWN}
+    wait until element is visible  ${PROFILE_LOGOUT_LINK}
     click link   ${PROFILE_LOGOUT_LINK}
     wait until page contains  Please sign in  10
 

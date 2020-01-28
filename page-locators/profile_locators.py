@@ -1,4 +1,4 @@
-PROFILE_DROPDOWN= 'xpath=(//a[@href="#"])[4]'
+PROFILE_DROPDOWN= "//a[contains(text(),'Me')]"
 PROFILE_LINK = '//a[@href="/user/profile"]'
 PROFILE_FIRSTNAME = "//input[@id='firstName']"
 PROFILE_LASTNAME = "//input[@id='lastName']"

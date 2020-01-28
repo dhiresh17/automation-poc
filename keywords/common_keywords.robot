@@ -8,6 +8,7 @@ Library     SeleniumLibrary    screenshot_root_directory=front-end-screenshots  
 Initialise Application
     open browser  ${APPURL}  ${BROWSER}
     maximize browser window
+    set selenium speed  0.1s
     validate initialisation
 
 Terminate Application
